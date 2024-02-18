@@ -69,15 +69,15 @@
         $('.brand-carousel-one').owlCarousel({
             loop: true,
             margin: 0,
-            nav: false,
+            nav: true,
             navText: [
                 '<i class="fa fa-long-arrow-left"></i>',
                 '<i class="fa fa-long-arrow-right"></i>'
             ],
-            dots: false,
+            dots: true,
             autoWidth: false,
             autoplay: true,
-            smartSpeed: 700,
+            smartSpeed: 1200,
             autoplayTimeout: 5000,
             autoplayHoverPause: true,
             responsive: {
