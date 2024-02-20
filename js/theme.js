@@ -70,16 +70,44 @@
             loop: true,
             margin: 0,
             nav: true,
+            items: 1,
             navText: [
                 '<i class="fa fa-long-arrow-left"></i>',
                 '<i class="fa fa-long-arrow-right"></i>'
             ],
             dots: true,
             autoWidth: false,
-            autoplay: true,
+            merge:true,
+            autoplay: false,
             smartSpeed: 1200,
             autoplayTimeout: 5000,
             autoplayHoverPause: true,
+            onTranslate: function(event) {
+
+                var currentSlide, player, command;
+        
+                currentSlide = $('.owl-item.active');
+        
+                player = currentSlide.find(".item-video iframe").get(0);
+        
+                command = {
+                    "event": "command",
+                    "func": "pauseVideo"
+                };
+        
+                if (player != undefined) {
+                    player.contentWindow.postMessage(JSON.stringify(command), "*");
+        
+                }
+        
+            },
+            onTranslate: function(){
+                // $('.item-video').find('video').each(function() {
+                //     this.pause();
+                // });
+                // $('SELECTOR iframe').prop('src','');
+                
+            },
             responsive: {
                 0: {
                     items: 1

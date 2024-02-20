@@ -275,7 +275,7 @@
 
     .header-navigation .container .menu-toggler {
         float: right;
-        margin: 23px 0;
+        margin: 23px -138px;
         color: #111111;
     }
 
