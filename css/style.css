@@ -1948,3 +1948,16 @@ hr.style-one {
       height: 300px;
   }
 
+
+
+
+  .languecont{
+    position: absolute;
+    left: 97%;
+    top: 170%;
+    border: solid;
+    padding-right: 27px;
+    border-radius: 8px;
+    background-color: #F0A734;
+
+  }
